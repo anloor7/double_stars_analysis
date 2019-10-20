@@ -121,6 +121,8 @@ p <- ggplot(df_plot, aes(F0inv, vector_muestral))
 p + geom_point(col = 'blue') + geom_abline(intercept = 0, slope = 1, col = 'orange') +
   xlab('Theoretical quantiles') + ylab('Sample quantiles') + labs(title = 'Parallaxes')
 
+# Proper motions analysis
+
 pmra_g_vector <- hipparcos_gdr2$gaia_pmra
 pmde_g_vector <- hipparcos_gdr2$gaia_pmde
 pmra_sd_g_vector <- hipparcos_gdr2$gaia_pmra_e
@@ -238,7 +240,6 @@ plot + geom_point(alpha=1/2, size=2, color='blue') +
 cor(b, log_almacenar)
 
 # Histograms
-
 
 library(ggplot2)
 library(gbm)
