@@ -1,2 +1,1 @@
-# double_stars_analysis
-Photocenter shift detection involving double stars in GDR2 catalogue 
+This repository contains the code and the data using in order to detect binarity detection in Gaia database GDR2. The folder called code contains the whole R code used in the analysis with some coments. The folder data contains the different astronomical data sets utilised during the analysis. 
