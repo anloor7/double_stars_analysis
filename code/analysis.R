@@ -208,7 +208,7 @@ p + geom_point(col = 'blue') + geom_abline(intercept = 0, slope = 1, col = 'oran
 library(latex2exp)
 a <- (omega_g-omega_h)^2
 b <- abs(hipparcos_gdr2$deltaHp)
-log_a <- log(a, 10)
+log_a <- log(a)
 model1 <- lm(b~log_a)
 summary(model1)
 cor(b, log_a)
@@ -226,7 +226,7 @@ almacenar <- numeric(nrow(hipparcos_gdr2))
 for (i in seq(1, nrow(hipparcos_gdr2))) {
   almacenar[i]=delta_p[i, 1]^2+delta_p[i, 2]^2}
 
-log_almacenar <- log(almacenar, 10)
+log_almacenar <- log(almacenar)
 plot(log_almacenar~b, ylab='log (W·W)', xlab='absolute value of visual magnitude difference', ylim=c(-3, 3), col='orange', main='Proper Motions')
 model2 <- lm(log_almacenar~b)
 abline(model2, col='blue')
